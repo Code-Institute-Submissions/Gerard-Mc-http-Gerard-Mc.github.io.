@@ -8,7 +8,7 @@
      background-color: black;
      color: white;
      font-family: 'Russo One', sans-serif;
-     background-image: url(../images/xs-body-bg.png);
+     background-image: url(/assets/images/xs-body-bg.png);
      background-position: center;
      background-repeat: no-repeat;
      background-size: cover;
@@ -18,20 +18,20 @@
      /* styles the header elements on the xs homepage */
      #home-header {
          padding-bottom: 50px;
-         background-image: url(../images/xs-header-bg.jpg);
+         background-image: url(/assets/images/xs-header-bg.jpg);
          background-position: center;
          background-size: cover;
          margin-bottom: 40px;
          border-style: solid;
          border-color: white;
-         border-width: 3px 0;
-         height: 300px;
+         border-width: 1px 0;
+         height: 340px;
     }
      #home-header img{
          display: block;
          width: 100px;
          margin: 0 auto;
-         padding-top: 50px;
+         padding-top: 38px;
     }
      #home-header h1{
          width: auto;
@@ -39,8 +39,8 @@
          text-align: center;
          margin: 30px auto;
          margin-top: 20px;
-         margin-bottom: 30px;
-         padding: 5px 0 ;
+         margin-bottom: 45px;
+         padding: 15px 0 ;
          letter-spacing: 9px;
          font-size: 28px;
          font-weight: 100;
@@ -56,8 +56,8 @@
      /* styles start game button in the header and bottom on page */
      .home-start-button{
          margin: 0 auto;
-         width: 120px;
-         height: 50px;
+         width: 140px;
+         height: 60px;
          font-weight: bold;
          border-style: solid;
          border-radius: 18px;
@@ -66,6 +66,7 @@
          background-color: black;
          text-align: center;
          letter-spacing: 7px;
+       
     }
      .home-start-button a{
          text-decoration: none;
@@ -74,7 +75,7 @@
          height: 50px;
          padding: 30px 20px;
          padding-left: 28px;
-         line-height: 3.3;
+         line-height: 3.8;
          vertical-align: middle;
     }
      .bottom-start-button{
@@ -90,7 +91,7 @@
      .index-main-text {
          border-style: solid;
          border-bottom-color: white;
-         border-width: 3px 0;
+         border-width: 1px 0;
          background-color: rgba(0, 0, 0, 0.54);
          width: 90%;
          margin: 0 auto;
@@ -107,13 +108,14 @@
      .video {
          border-style: solid;
          border-bottom-color: white;
-         border-width: 3px 0;
+         border-width: 1px 0;
          background-color: rgba(0, 0, 0, 0.54);
          width: 90%;
          margin: 0 auto;
          margin-bottom: 10px;
          padding: 20px;
     }
+     
         .video iframe{
          display: block;
          width: auto;
