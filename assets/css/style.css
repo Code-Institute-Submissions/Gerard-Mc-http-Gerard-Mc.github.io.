@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Russo+One&display=swap');
+ * {
+     padding: 0;
+     margin: 0;
+     border: 0;
+}
+ body {
+     background-color: black;
+     color: white;
+     font-family: 'Russo One', sans-serif;
+     background-image: url(/assets/images/xs-body-bg.png);
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-attachment: fixed;
+}
+ @media screen and (max-width: 576px) {
+     /* styles the header elements on the xs homepage */
+     #home-header {
+         padding-bottom: 50px;
+         background-image: url(/assets/images/xs-header-bg.jpg);
+         background-position: center;
+         background-size: cover;
+         margin-bottom: 40px;
+         border-style: solid;
+         border-color: white;
+         border-width: 3px 0;
+         height: 300px;
+    }
+     #home-header img{
+         display: block;
+         width: 100px;
+         margin: 0 auto;
+         padding-top: 50px;
+    }
+     #home-header h1{
+         width: auto;
+         background-color: black;
+         text-align: center;
+         margin: 30px auto;
+         margin-top: 20px;
+         margin-bottom: 30px;
+         padding: 5px 0 ;
+         letter-spacing: 9px;
+         font-size: 28px;
+         font-weight: 100;
+    }
+     #header-content-circle{
+         background-color: rgba(0, 0, 0, 0.67);
+         width: 60vw;
+         height: 60vw;
+         border-radius: 30vw;
+         margin: 0 auto;
+         display: block;
+    }
+     /* styles start game button in the header and bottom on page */
+     .home-start-button{
+         margin: 0 auto;
+         width: 120px;
+         height: 50px;
+         font-weight: bold;
+         border-style: solid;
+         border-radius: 18px;
+         border-color: white;
+         border-width: 2px;
+         background-color: black;
+         text-align: center;
+         letter-spacing: 7px;
+    }
+     .home-start-button a{
+         text-decoration: none;
+         color: white;
+         width: 140px;
+         height: 50px;
+         padding: 30px 20px;
+         padding-left: 28px;
+         line-height: 3.3;
+         vertical-align: middle;
+    }
+     .bottom-start-button{
+         margin-top: 30px;
+         margin-bottom: 30px;
+    }
+     /* styles the information elements */
+     .index-main-text h2{
+         width: 100%;
+         text-align: center;
+         margin-bottom: 20px;
+    }
+     .index-main-text {
+         border-style: solid;
+         border-bottom-color: white;
+         border-width: 3px 0;
+         background-color: rgba(0, 0, 0, 0.54);
+         width: 90%;
+         margin: 0 auto;
+         margin-bottom: 30px;
+         padding: 20px;
+    }
+     .index-main-text ul{
+         list-style-type: none;
+    }
+     .index-main-text ul li {
+         margin-bottom: 15px;
+    }
+     /* styles the information video */
+     .video {
+         border-style: solid;
+         border-bottom-color: white;
+         border-width: 3px 0;
+         background-color: rgba(0, 0, 0, 0.54);
+         width: 90%;
+         margin: 0 auto;
+         margin-bottom: 10px;
+         padding: 20px;
+    }
+        .video iframe{
+         display: block;
+         width: auto;
+         margin: 0 auto;
+         margin-bottom: 50px;
+    }
+}
