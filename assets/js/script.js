@@ -6,13 +6,4 @@ class ApeArray {
 		this.boxes = 9;
 		this.startGameCountDownTime = 3;
 	}
-    start() {
-		this.started = false;
-		this.randomNumbers = this.creatingRandomNumbers(this.boxes);
-		this.renderBoard();
-		this.gameStarted();
-	
-	}
-}
-    
 const apeArray = new ApeArray();
