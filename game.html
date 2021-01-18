@@ -12,35 +12,39 @@
    <body id="game-body">
       <header>
          <div id="game-hub">
-            <button id="reset-button">Reset Scores
-            </button>
-            <div id="logo-circle"></div>
-            <h1><a href="index.html">APE BRAIN</a></h1>
-            <div id="score-wrap">
-               <div class="score-circle">
-                  <h2 id="record-h2">Record</h2>
+            <div id="home-page-el" class="hub-element">
+                <h2><a href="index.html">Return<br><span><i class="fas fa-chevron-left"></i></span><span><i class="fas fa-chevron-left"></i></span></a></h2>
+            </div>
+            <a href="index.html"><div id="logo-circle"></div></a>
+            <h1>Ape Array</h1>
+             <div id="score-wrap">
+               <div id="record-holderEl" class="hub-element">
+                  <h2>Record</h2>
                   <p id="record">0</p>
                </div>
-               <div class="score-circle">
+                 <div id="xs-levelEl-scoreEl-wrap">
+               <div id="level-holderEl" class="hub-element">
                   <h2>Level</h2>
                   <p id="level">0</p>
                </div>
-               <div class="score-circle">
+               <div id="score-holderEl" class="hub-element">
                   <h2>Score</h2>
                   <p id="score">0</p>
                </div>
-            </div>
-            <div id="info-page" class="score-circle">
-               <h2><a href="index.html">Home<br><br><span><i class="fas fa-backward"></i></span></a></h2>
-            </div>
+            </div> 
+        </div>
+           <!-- <button id="reset-button">Reset Scores
+            </button> -->
          </div>
+          
       </header>
       <div id="game-area">
-         <div class="" id="box-container">
-            <button id="start-button">Start
+        <!-- <div class="" id="box-container">
+           <button id="start-button">Start
             </button>
-         </div>
+         </div> -->
       </div>
+       
       <script src="assets/js/script.js"></script>
    </body>
 </html>
