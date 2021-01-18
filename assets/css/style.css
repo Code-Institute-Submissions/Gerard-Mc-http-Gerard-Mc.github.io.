@@ -224,5 +224,21 @@
      #score-holderEl{
          float: right;
     }
+    #reset-button{
+        position: absolute;
+		top: 230px;
+		height: 38px;
+		font-size: 15px;
+        border-style: solid;
+		border-color: white;
+        border-width: 2px;
+        border-radius: 10px;
+        padding: 0 20px;
+		background-color: rgba(0, 0, 0, 0.32);
+		color: white;
+        left: 50%;
+	    font-family: 'Russo One', sans-serif;
+	    transform: translate(-50%, 0%);
+     }
 }
  
