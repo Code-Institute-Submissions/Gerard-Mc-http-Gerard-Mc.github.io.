@@ -304,3 +304,36 @@
          transform: translate(0%, 10%);
     }
 }
+@media screen and (min-width: 1200px) {
+    /* Game page styling*/
+     #record-holderEl h2{
+         top: 20px;
+         right: 25px;
+         font-size: 25px;
+    }
+     #record-holderEl p{
+         top: 65px;
+         right: 55px;
+         font-size: 40px;
+    }
+     #home-page-el a{
+         font-size: 25px;
+    }
+     #home-page-el a span{
+         top: 1px;
+         left: 54px;
+         font-size: 16px;
+    }
+     .hub-element p{
+         font-size: 30px !important;
+    }
+     #reset-button{
+         top: 250px;
+    }
+     /* Home page styling*/
+     iframe{
+         min-width:700px;
+         min-height: 500px;
+    }
+}
+ 
