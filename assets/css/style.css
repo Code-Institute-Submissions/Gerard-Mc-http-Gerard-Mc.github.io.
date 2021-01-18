@@ -8,23 +8,23 @@
      background-color: black;
      color: white;
      font-family: 'Russo One', sans-serif;
-     background-image: url(/assets/images/xs-body-bg.png);
+     background-image: url(../images/xs-body-bg.png);
      background-position: center;
      background-repeat: no-repeat;
      background-size: cover;
      background-attachment: fixed;
 }
  @media screen and (max-width: 576px) {
-     /* styles the header elements on the xs homepage */
+    /* styles the header elements on the xs homepage */
      #home-header {
          padding-bottom: 50px;
-         background-image: url(/assets/images/xs-header-bg.jpg);
+         background-image: url(../images/xs-header-bg.jpg);
          background-position: center;
          background-size: cover;
          margin-bottom: 40px;
          border-style: solid;
          border-color: white;
-         border-width: 1px 0;
+         border-width: 1px;
          height: 340px;
     }
      #home-header img{
@@ -41,7 +41,9 @@
          margin-top: 20px;
          margin-bottom: 45px;
          padding: 15px 0 ;
-         letter-spacing: 9px;
+         letter-spacing: .33em;
+         text-indent: -.33em;
+         direction:rtl;
          font-size: 28px;
          font-weight: 100;
     }
@@ -53,7 +55,7 @@
          margin: 0 auto;
          display: block;
     }
-     /* styles start game button in the header and bottom on page */
+    /* styles start game button in the header and bottom on page */
      .home-start-button{
          margin: 0 auto;
          width: 140px;
@@ -66,7 +68,6 @@
          background-color: black;
          text-align: center;
          letter-spacing: 7px;
-       
     }
      .home-start-button a{
          text-decoration: none;
@@ -82,7 +83,7 @@
          margin-top: 30px;
          margin-bottom: 30px;
     }
-     /* styles the information elements */
+    /* styles the information elements */
      .index-main-text h2{
          width: 100%;
          text-align: center;
@@ -104,7 +105,7 @@
      .index-main-text ul li {
          margin-bottom: 15px;
     }
-     /* styles the information video */
+    /* styles the information video */
      .video {
          border-style: solid;
          border-bottom-color: white;
@@ -115,11 +116,26 @@
          margin-bottom: 10px;
          padding: 20px;
     }
-     
-        .video iframe{
+     .video iframe{
          display: block;
          width: auto;
          margin: 0 auto;
          margin-bottom: 50px;
     }
+    /* XS game page hub styling starts here */
+     #game-hub{
+         height: 220px;
+    }
+     #logo-circle{
+         position: relative;
+         height: 100px;
+         width: 100px;
+         left: 50%;
+         top: 15px;
+         transform: translate(-50%,0%);
+         background-image: url(/assets/images/ape.png);
+         background-size: cover;
+    }
+ 
 }
+ 
