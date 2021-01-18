@@ -15,251 +15,274 @@
      background-size: cover;
      background-attachment: fixed;
 }
-    /* styles the header elements on the xs homepage */
-     #home-header {
-         padding-bottom: 50px;
-         background-image: url(../images/xs-header-bg.jpg);
-         background-position: center;
-         background-size: cover;
-         margin-bottom: 40px;
-         border-style: solid;
-         border-color: white;
-         border-width: 1px;
-         height: 340px;
-    }
-     #home-header img{
-         display: block;
-         width: 100px;
-         margin: 0 auto;
-         padding-top: 38px;
-    }
+/* styles the header elements on the xs homepage */
+ #home-header {
+     padding-bottom: 50px;
+     background-image: url(../images/xs-header-bg.jpg);
+     background-position: center;
+     background-size: cover;
+     margin-bottom: 40px;
+     border-style: solid;
+     border-color: white;
+     border-width: 1px;
+     height: 340px;
+}
+ #home-header img{
+     display: block;
+     width: 100px;
+     margin: 0 auto;
+     padding-top: 38px;
+}
+ #home-header h1{
+     width: auto;
+     background-color: black;
+     text-align: center;
+     margin: 30px auto;
+     margin-top: 20px;
+     margin-bottom: 45px;
+     padding: 15px 0 ;
+     letter-spacing: .33em;
+     text-indent: -.33em;
+     direction:rtl;
+     font-size: 28px;
+     font-weight: 100;
+}
+ #header-content-circle{
+     background-color: rgba(0, 0, 0, 0.67);
+     width: 60vw;
+     height: 60vw;
+     border-radius: 30vw;
+     margin: 0 auto;
+     display: block;
+}
+/* styles start game button in the header and bottom on page */
+ .home-start-button{
+     margin: 0 auto;
+     width: 140px;
+     height: 60px;
+     font-weight: bold;
+     border-style: solid;
+     border-radius: 18px;
+     border-color: white;
+     border-width: 2px;
+     background-color: black;
+     text-align: center;
+     letter-spacing: 7px;
+}
+ .home-start-button a{
+     text-decoration: none;
+     color: white;
+     width: 140px;
+     height: 50px;
+     padding: 30px 20px;
+     padding-left: 28px;
+     line-height: 3.8;
+     vertical-align: middle;
+}
+ .bottom-start-button{
+     margin-top: 30px;
+     margin-bottom: 30px;
+}
+/* styles the information elements */
+ .index-main-text h2{
+     width: 100%;
+     text-align: center;
+     margin-bottom: 20px;
+}
+ .index-main-text {
+     border-style: solid;
+     border-bottom-color: white;
+     border-width: 1px 0;
+     background-color: rgba(0, 0, 0, 0.54);
+     width: 90%;
+     margin: 0 auto;
+     margin-bottom: 30px;
+     padding: 20px;
+}
+ .index-main-text ul{
+     list-style-type: none;
+}
+ .index-main-text ul li {
+     margin-bottom: 15px;
+}
+/* styles the information video */
+ .video {
+     border-style: solid;
+     border-bottom-color: white;
+     border-width: 1px 0;
+     background-color: rgba(0, 0, 0, 0.54);
+     width: 90%;
+     margin: 0 auto;
+     margin-bottom: 10px;
+     padding: 20px;
+}
+ .video iframe{
+     display: block;
+     width: auto;
+     margin: 0 auto;
+     margin-bottom: 50px;
+}
+/* XS game page hub styling starts here */
+ #game-hub{
+     height: 200px;
+}
+ #logo-circle{
+     position: relative;
+     height: 100px;
+     width: 100px;
+     left: 50%;
+     top: 15px;
+     transform: translate(-50%,0%);
+     background-image: url(/assets/images/ape.png);
+     background-size: cover;
+}
+/* Link to homepage */
+ #home-page-el{
+     position: absolute;
+     height: 80px;
+     width: 90px;
+     top: 13px;
+     left: 10px;
+     border-style: none;
+     border-color: white;
+     border-width: 2px;
+     border-radius: 5px;
+}
+ #home-page-el a{
+     position: relative;
+     top: 5px;
+     padding: 43px 20px;
+     width: 100px;
+     height: 100px;
+     color: white;
+     text-decoration: none;
+     text-align: center;
+     font-size: 15px;
+     padding-right: 70px;
+}
+ #home-page-el a span{
+     position: relative;
+     top: 5px;
+     left: 36px;
+     font-size: 16px;
+}
+/* Element that holds the record score title */
+ #record-holderEl{
+     position: absolute;
+     height: 40px;
+     width: 45px;
+     top: 5px;
+     right: 15px;
+     padding: 20px 20px;
+     text-align: center;
+     border-style: none;
+     border-color: white;
+     border-width: 2px;
+     border-radius: 5px;
+}
+ #record-holderEl h2{
+     position: absolute;
+     top: 20px;
+     right: 15px;
+     font-size: 15px;
+}
+ #record-holderEl p{
+     position: absolute;
+     top: 45px;
+     right: 30px;
+     font-size: 30px;
+}
+ #game-hub h1{
+     position: absolute;
+     left: 50%;
+     top: 123px;
+     transform: translate(-50%,0%);
+     width: 100%;
+     text-align: center;
+     letter-spacing: .23em;
+     text-indent: -.23em;
+     direction:rtl;
+     font-size: 30px;
+}
+/* Element made for wrapping the high score and current score together on xs screen */
+ #xs-levelEl-scoreEl-wrap{
+     position: absolute;
+     width: 100vw;
+     top: 168px;
+     margin: 0;
+}
+ #level-holderEl, #score-holderEl{
+     float: left;
+     background-color: white;
+     color: black;
+     position: relative;
+     min-width: 49.8%;
+     text-align: center;
+     margin: 0;
+     padding: 0;
+}
+ #score-holderEl{
+     float: right;
+}
+ #reset-button{
+     position: absolute;
+     top: 230px;
+     height: 38px;
+     font-size: 15px;
+     border-style: solid;
+     border-color: white;
+     border-width: 2px;
+     border-radius: 10px;
+     padding: 0 20px;
+     background-color: rgba(0, 0, 0, 0.32);
+     color: white;
+     left: 50%;
+     transform: translate(-50%, 0%);
+}
+ #start-button {
+     position: absolute;
+     width: 170px;
+     height: 170px;
+     border-radius: 100px;
+     font-size: 20px;
+     top: 350px;
+     left: 50%;
+     transform: translate(-50%, 0%);
+}
+ footer {
+     height: 40px;
+     text-align: center;
+     background-color: black;
+}
+ footer p{
+     position: relative;
+     top: 10px;
+}
+ @media screen and (min-width: 768px) {
+    /* Homepage styling */
      #home-header h1{
-         width: auto;
-         background-color: black;
-         text-align: center;
-         margin: 30px auto;
-         margin-top: 20px;
-         margin-bottom: 45px;
+         background-color: rgba(0, 0, 0, 0);
+         margin-top: 0px;
+         margin-bottom: 10px;
          padding: 15px 0 ;
-         letter-spacing: .33em;
-         text-indent: -.33em;
-         direction:rtl;
-         font-size: 28px;
-         font-weight: 100;
+         font-size: 38px;
     }
-     #header-content-circle{
-         background-color: rgba(0, 0, 0, 0.67);
-         width: 60vw;
-         height: 60vw;
-         border-radius: 30vw;
-         margin: 0 auto;
-         display: block;
-    }
-    /* styles start game button in the header and bottom on page */
-     .home-start-button{
-         margin: 0 auto;
-         width: 140px;
-         height: 60px;
-         font-weight: bold;
-         border-style: solid;
-         border-radius: 18px;
-         border-color: white;
-         border-width: 2px;
-         background-color: black;
-         text-align: center;
-         letter-spacing: 7px;
-    }
-     .home-start-button a{
-         text-decoration: none;
-         color: white;
-         width: 140px;
-         height: 50px;
-         padding: 30px 20px;
-         padding-left: 28px;
-         line-height: 3.8;
-         vertical-align: middle;
-    }
-     .bottom-start-button{
-         margin-top: 30px;
-         margin-bottom: 30px;
-    }
-    /* styles the information elements */
-     .index-main-text h2{
-         width: 100%;
-         text-align: center;
-         margin-bottom: 20px;
-    }
-     .index-main-text {
-         border-style: solid;
-         border-bottom-color: white;
-         border-width: 1px 0;
-         background-color: rgba(0, 0, 0, 0.54);
-         width: 90%;
-         margin: 0 auto;
-         margin-bottom: 30px;
-         padding: 20px;
+     .index-main-text p{
+         line-height: 1.5;
     }
      .index-main-text ul{
-         list-style-type: none;
+         list-style-type: circle;
     }
-     .index-main-text ul li {
-         margin-bottom: 15px;
+     iframe{
+         min-width: 400px;
+         min-height: 280px;
+         transform: translate(0%, 10%);
     }
-    /* styles the information video */
-     .video {
-         border-style: solid;
-         border-bottom-color: white;
-         border-width: 1px 0;
-         background-color: rgba(0, 0, 0, 0.54);
-         width: 90%;
-         margin: 0 auto;
-         margin-bottom: 10px;
-         padding: 20px;
-    }
-     .video iframe{
-         display: block;
-         width: auto;
-         margin: 0 auto;
-         margin-bottom: 50px;
-    }
-    /* XS game page hub styling starts here */
-     #game-hub{
-         height: 200px;
-    }
-     #logo-circle{
-         position: relative;
-         height: 100px;
-         width: 100px;
-         left: 50%;
-         top: 15px;
-         transform: translate(-50%,0%);
-         background-image: url(/assets/images/ape.png);
-         background-size: cover;
-    }
-     /* Link to homepage */
-     #home-page-el{
-         position: absolute;
-         height: 80px;
-         width: 90px;
-         top: 13px;
-         left: 10px;
-         border-style: none;
-         border-color: white;
-         border-width: 2px;
-         border-radius: 5px;
-    }
-     #home-page-el a{
-         position: relative;
-         top: 5px;
-         padding: 43px 20px;
-         width: 100px;
-         height: 100px;
-         color: white;
-         text-decoration: none;
-         text-align: center;
-         font-size: 15px;
-         padding-right: 70px;
-    }
-     #home-page-el a span{
-         position: relative;
-         top: 5px;
-         left: 36px;
-         font-size: 16px;
-    }
-     /* Element that holds the record score title */
-     #record-holderEl{
-         position: absolute;
-         height: 40px;
-         width: 45px;
-         top: 5px;
-         right: 15px;
-         padding: 20px 20px;
-         text-align: center;
-         border-style: none;
-         border-color: white;
-         border-width: 2px;
-         border-radius: 5px;
-    }
-     #record-holderEl h2{
-         position: absolute;
-         top: 20px;
-         right: 15px;
-         font-size: 15px;
-    }
-     #record-holderEl p{
-         position: absolute;
-         top: 45px;
-         right: 30px;
-         font-size: 30px;
-    }
-     #game-hub h1{
-         position: absolute;
-         left: 50%;
-         top: 123px;
-         transform: translate(-50%,0%);
-         width: 100%;
-         text-align: center;
-         letter-spacing: .23em;
-         text-indent: -.23em;
-         direction:rtl;
-         font-size: 30px;
-    }
-     /* Element made for wrapping the high score and current score together on xs screen */
-     #xs-levelEl-scoreEl-wrap{
-         position: absolute;
-         width: 100vw;
-         top: 168px;
-         margin: 0;
-    }
-     #level-holderEl, #score-holderEl{
-         float: left;
-         background-color: white;
-         color: black;
-         position: relative;
-         min-width: 49.8%;
-         text-align: center;
-         margin: 0;
-         padding: 0;
-    }
-     #score-holderEl{
-         float: right;
-    }
-     
-     #reset-button{
-        position: absolute;
-		top: 230px;
-		height: 38px;
-		font-size: 15px;
-        border-style: solid;
-		border-color: white;
-        border-width: 2px;
-        border-radius: 10px;
-        padding: 0 20px;
-		background-color: rgba(0, 0, 0, 0.32);
-		color: white;
-        left: 50%;
-	    transform: translate(-50%, 0%);
-     }
-     
+    /* Game page styling*/
      #start-button {
-        position: absolute;
-		width: 170px;
-		height: 170px;
-		border-radius: 100px;
-		font-size: 20px;
-		top: 350px;
-        left: 50%;
-	    transform: translate(-50%, 0%);
-	}
-     footer {
-         height: 40px;
-         text-align: center;
-         background-color: black;
-     }
-     footer p{
-        position: relative;
-        top: 10px;
-        
-     }
-
- 
+         width: 280px;
+         height: 280px;
+         border-radius: 140px;
+         font-size: 25px;
+    }
+}
