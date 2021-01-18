@@ -136,6 +136,35 @@
          background-image: url(/assets/images/ape.png);
          background-size: cover;
     }
- 
+     /* Link to homepage */
+     #home-page-el{
+         position: absolute;
+         height: 80px;
+         width: 90px;
+         top: 13px;
+         left: 10px;
+         border-style: none;
+         border-color: white;
+         border-width: 2px;
+         border-radius: 5px;
+    }
+     #home-page-el a{
+         position: relative;
+         top: 5px;
+         padding: 43px 20px;
+         width: 100px;
+         height: 100px;
+         color: white;
+         text-decoration: none;
+         text-align: center;
+         font-size: 15px;
+         padding-right: 70px;
+    }
+     #home-page-el a span{
+         position: relative;
+         top: 5px;
+         left: 36px;
+         font-size: 16px;
+    }
 }
  
