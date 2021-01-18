@@ -286,21 +286,3 @@
          font-size: 25px;
     }
 }
-
-@media screen and (min-width: 992px) {
-     /* Home page styling*/
-     #game-rules ul {
-         text-align: center;
-         list-style-type: none;
-    }
-     .video{
-         width: 100%;
-         border-style: none;
-    }
-     iframe{
-         min-width:500px;
-         min-height: 300px;
-         position: relative;
-         transform: translate(0%, 10%);
-    }
-}
