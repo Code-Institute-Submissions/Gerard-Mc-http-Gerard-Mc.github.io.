@@ -124,7 +124,7 @@
     }
     /* XS game page hub styling starts here */
      #game-hub{
-         height: 220px;
+         height: 200px;
     }
      #logo-circle{
          position: relative;
@@ -190,6 +190,18 @@
          position: absolute;
          top: 45px;
          right: 30px;
+         font-size: 30px;
+    }
+     #game-hub h1{
+         position: absolute;
+         left: 50%;
+         top: 123px;
+         transform: translate(-50%,0%);
+         width: 100%;
+         text-align: center;
+         letter-spacing: .23em;
+         text-indent: -.23em;
+         direction:rtl;
          font-size: 30px;
     }
 }
