@@ -94,9 +94,8 @@
      border-bottom-color: white;
      border-width: 1px 0;
      background-color: rgba(0, 0, 0, 0.54);
-     width: 90%;
+     width: 100%;
      margin: 0 auto;
-     margin-bottom: 30px;
      padding: 20px;
 }
  .index-main-text ul{
@@ -252,6 +251,8 @@
      height: 40px;
      text-align: center;
      background-color: black;
+     position: relative;
+     bottom: 0;
 }
  footer p{
      position: relative;
@@ -288,31 +289,56 @@
          text-align: center;
          list-style-type: none;
     }
-     @media screen and (min-width: 1200px) {
-        /* Game page styling*/
-         #record-holderEl h2{
-             top: 20px;
-             right: 25px;
-             font-size: 25px;
-        }
-         #record-holderEl p{
-             top: 65px;
-             right: 55px;
-             font-size: 40px;
-        }
-         #home-page-el a{
-             font-size: 25px;
-        }
-         #home-page-el a span{
-             top: 1px;
-             left: 54px;
-             font-size: 16px;
-        }
-         .hub-element p{
-             font-size: 30px !important;
-        }
-         #reset-button{
-             top: 250px;
-        }
-        /* Home page styling*/
+     .ape-info{
+         background-color: rgba(0, 0, 0, 0.67);
+         margin-top: 40px;
+         height: auto;
+         display: flex;
+         align-items: center;
     }
+     .chimp {
+         background-color: rgba(0, 0, 0, 0);
+         display: inline-block;
+         width: 40%;
+         border: none;
+    }
+    /* styles the information video */
+     .video {
+         background-color: rgba(0, 0, 0, 0);
+         width: 50%;
+         height: auto;
+    }
+     .video iframe{
+         background-color: rgba(0, 0, 0, 0);
+         min-height: 300px;
+    }
+}
+ @media screen and (min-width: 1200px) {
+    /* Game page styling*/
+     #record-holderEl h2{
+         top: 20px;
+         right: 25px;
+         font-size: 25px;
+    }
+     #record-holderEl p{
+         top: 65px;
+         right: 55px;
+         font-size: 40px;
+    }
+     #home-page-el a{
+         font-size: 25px;
+    }
+     #home-page-el a span{
+         top: 1px;
+         left: 54px;
+         font-size: 16px;
+    }
+     .hub-element p{
+         font-size: 30px !important;
+    }
+     #reset-button{
+         top: 250px;
+    }
+    /* Home page styling*/
+}
+ 
