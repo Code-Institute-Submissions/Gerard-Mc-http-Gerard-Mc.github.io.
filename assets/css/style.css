@@ -96,6 +96,13 @@
      width: 100%;
      text-align: center;
      margin-bottom: 20px;
+     font-size: 30px;
+     letter-spacing: .23em;
+     text-indent: -.23em;
+}
+ .ape-info h2{
+     text-align: center;
+     padding: 10px;
 }
  .index-main-text {
      width: 100%;
@@ -109,13 +116,14 @@
      margin-bottom: 15px;
 }
  #game-rules{
-     background-color: black;
+     background-color: rgba(0, 0, 0, 0.67);
      padding: 50px 0;
 }
  .ape-info{
-     background-color: rgba(5, 6, 34, 0);
-     padding: 0 20px;
-     padding: 50px 0;
+     background-color: rgba(0, 0, 0, 0.67);
+     padding: 50px 10px;
+     margin-bottom: 30px;
+     margin-top: 30px;
 }
  .chimp{
      width: 95%;
@@ -219,6 +227,28 @@
      direction:rtl;
      font-size: 30px;
 }
+/* game area styling starts here */
+ #game-area{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+ #box-container {
+     width: 90vw;
+     margin-top: 100px;
+     height: auto;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+ .col{
+     background-color: white;
+     display: inline-block;
+     width: 30vw;
+     color: black;
+     height:150px;
+     margin: 20px;
+}
 /* Element made for wrapping the high score and current score together on xs screen */
  #xs-levelEl-scoreEl-wrap{
      position: absolute;
@@ -302,6 +332,9 @@
 }
  @media screen and (min-width: 992px) {
     /* Home page styling*/
+     .index-main-text{
+         font-size: 18px;
+    }
      #game-rules ul {
          text-align: center;
          list-style-type: none;
@@ -312,6 +345,9 @@
          height: auto;
          display: flex;
          align-items: center;
+    }
+     .ape-info h2{
+         text-align: left;
     }
      .chimp {
          background-color: rgba(0, 0, 0, 0);
@@ -351,7 +387,7 @@
          font-size: 16px;
     }
      .hub-element p{
-         font-size: 30px !important;
+         font-size: 30px;
     }
      #reset-button{
          top: 250px;

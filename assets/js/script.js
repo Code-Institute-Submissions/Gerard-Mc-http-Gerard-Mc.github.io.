@@ -1,18 +1,28 @@
 class ApeArray {
 	constructor() {
-        this.randomNumbers = null;
+        this.score = 0;
+		this.boxes = 9;
+        this.randomNumbers = this.creatingRandomNumbers(this.boxes); 
+		this.renderBoard();
 		this.startButtonEl = document.getElementById("start-button");
 		this.resetButtonEl = document.getElementById("reset-button");
-		this.score = 0;
-		this.boxes = 9;
 		this.startGameCountDownTime = 3;
 	}
     start() {
-		this.randomNumbers = this.creatingRandomNumbers(this.boxes); this.creatingRandomNumbers(this.boxes);
-		this.renderBoard();
 		this.gameStarted();
 	
 	}
+    
+    renderBoard() {
+		const boxContainer = document.getElementById("box-container");
+		this.randomNumbers.forEach((item, index) => {
+			let col = document.createElement("div");
+			col.className = "col";
+			col.innerHTML = index;
+			boxContainer.appendChild(col);
+		});
+	}
+    
     /* Fisher–Yates shuffle algorithm */
     creatingRandomNumbers(total) {
 		var randomNumbers = [];
