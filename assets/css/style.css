@@ -166,5 +166,31 @@
          left: 36px;
          font-size: 16px;
     }
+     /* Element that holds the record score title */
+     #record-holderEl{
+         position: absolute;
+         height: 40px;
+         width: 45px;
+         top: 5px;
+         right: 15px;
+         padding: 20px 20px;
+         text-align: center;
+         border-style: none;
+         border-color: white;
+         border-width: 2px;
+         border-radius: 5px;
+    }
+     #record-holderEl h2{
+         position: absolute;
+         top: 20px;
+         right: 15px;
+         font-size: 15px;
+    }
+     #record-holderEl p{
+         position: absolute;
+         top: 45px;
+         right: 30px;
+         font-size: 30px;
+    }
 }
  
