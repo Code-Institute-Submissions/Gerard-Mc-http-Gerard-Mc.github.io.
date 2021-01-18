@@ -15,16 +15,6 @@
      background-size: cover;
      background-attachment: fixed;
 }
-
-@media screen and (min-width: 768px) {
-    
-    
-}
-
-
-
-
- @media screen and (max-width: 767px) {
     /* styles the header elements on the xs homepage */
      #home-header {
          padding-bottom: 50px;
@@ -271,5 +261,5 @@
         top: 10px;
         
      }
-}
+
  
