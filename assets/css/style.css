@@ -204,5 +204,25 @@
          direction:rtl;
          font-size: 30px;
     }
+     /* Element made for wrapping the high score and current score together on xs screen */
+     #xs-levelEl-scoreEl-wrap{
+         position: absolute;
+         width: 100vw;
+         top: 168px;
+         margin: 0;
+    }
+     #level-holderEl, #score-holderEl{
+         float: left;
+         background-color: white;
+         color: black;
+         position: relative;
+         min-width: 49.8%;
+         text-align: center;
+         margin: 0;
+         padding: 0;
+    }
+     #score-holderEl{
+         float: right;
+    }
 }
  
