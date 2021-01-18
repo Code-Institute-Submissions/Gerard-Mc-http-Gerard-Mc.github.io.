@@ -6,14 +6,14 @@
      font-family: 'Russo One', sans-serif;
 }
  body {
-     background-color: black;
-     color: white;
-     font-family: 'Russo One', sans-serif;
+     background-color: #585191;
      background-image: url(../images/xs-body-bg.png);
      background-position: center;
      background-repeat: no-repeat;
      background-size: cover;
      background-attachment: fixed;
+     color: white;
+     font-family: 'Russo One', sans-serif;
 }
 /* styles the header elements on the xs homepage */
  #home-header {
@@ -21,8 +21,9 @@
      background-image: url(../images/xs-header-bg.jpg);
      background-position: center;
      background-size: cover;
-     margin-bottom: 40px;
      border-style: solid;
+     border-left-style: none;
+     border-right-style: none;
      border-color: white;
      border-width: 1px;
      height: 340px;
@@ -79,9 +80,16 @@
      line-height: 3.8;
      vertical-align: middle;
 }
+/* styles the bottom page button */
  .bottom-start-button{
-     margin-top: 30px;
      margin-bottom: 30px;
+     background-color: white;
+     color: black;
+     border-color: black;
+}
+ .bottom-start-button a{
+     margin-bottom: 30px;
+     color: black;
 }
 /* styles the information elements */
  .index-main-text h2{
@@ -90,34 +98,43 @@
      margin-bottom: 20px;
 }
  .index-main-text {
-     border-style: solid;
-     border-bottom-color: white;
-     border-width: 1px 0;
-     background-color: rgba(0, 0, 0, 0.54);
      width: 100%;
-     margin: 0 auto;
-     padding: 20px;
 }
  .index-main-text ul{
      list-style-type: none;
+     text-align: center;
+     padding:0 20px;
 }
  .index-main-text ul li {
      margin-bottom: 15px;
 }
+ #game-rules{
+     background-color: black;
+     padding: 50px 0;
+}
+ .ape-info{
+     background-color: rgba(5, 6, 34, 0);
+     padding: 0 20px;
+     padding: 50px 0;
+}
+ .chimp{
+     width: 95%;
+     margin: 0 auto;
+     padding-bottom: 20px;
+}
 /* styles the information video */
  .video {
-     background-color: rgba(0, 0, 0, 0.54);
      width: 100%;
      height: 100%;
      max-width: 400px;
      margin: 0 auto;
      height: 200px;
+     background-color: blac 
 }
  .video iframe{
-     width: 90%;
+     width: 100%;
      height: 100%;
      min-height: 200px;
-     margin: 0 5%;
      margin-bottom: 0px;
 }
 /* XS game page hub styling starts here */
@@ -273,7 +290,7 @@
          line-height: 1.5;
     }
      .index-main-text ul{
-         list-style-type: circle;
+         text-align: center;
     }
     /* Game page styling*/
      #start-button {
