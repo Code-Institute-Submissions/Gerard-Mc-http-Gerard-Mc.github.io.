@@ -546,4 +546,11 @@
          font-size: 10px!important;
     }
 }
- 
+ @media (max-height: 768px) and (min-width: 992px) {
+     .col{
+        width: 100px;
+         height: 50px;
+         margin: 35px;
+         margin-top: 25px;
+    }
+}
