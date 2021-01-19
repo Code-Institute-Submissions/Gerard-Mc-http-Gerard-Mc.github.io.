@@ -110,6 +110,10 @@ class ApeArray {
                 this.start();
             }
         });
+        /* listens for player to click reset scores */
+        this.resetButtonEl.addEventListener("click", () => {
+			this.resetScoresButton();
+		});
     }
 
     countDown(timeInSeconds, callback, iterCallback = null) {
@@ -191,6 +195,15 @@ class ApeArray {
     resetScores() {
 		this.gameState.level = 1;
 		this.gameState.record = 0;
+	}
+    /* resets scores and gives option to start again */
+    resetScoresButton() {
+		this.resetScores();
+		this.updateGameState();
+		this.loadGameState();
+		this.removeBoxes();
+		this.startButtonEl.innerText = "Start";
+		this.startButtonEl.classList.remove('start-button-hide');
 	}
     
     removeBoxes() {
