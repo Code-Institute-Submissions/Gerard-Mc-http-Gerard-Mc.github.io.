@@ -49,6 +49,8 @@ class ApeArray {
 				level: 1
 			};
 		}
+        
+        this.renderState();
 	}
     
     /* Updates local storage values */
@@ -92,6 +94,7 @@ class ApeArray {
             }
 			// Game state is always store after a click on the board.
 			this.updateGameState();
+            this.renderState();
 		});
 
 
@@ -115,6 +118,16 @@ class ApeArray {
             }
         }, 100);
     }
+    
+    /* Renders scores to html elements */
+    renderState() {
+		const scoreLabel = document.getElementById('score');
+		const levelScoreLabel = document.getElementById('level');
+		const recordScoreLabel = document.getElementById('record');
+		scoreLabel.innerText = this.score;
+		levelScoreLabel.innerText = this.gameState.level;
+		recordScoreLabel.innerText = this.gameState.record;
+	}
 
     /* Renders boxes */
     renderBox(index) {
