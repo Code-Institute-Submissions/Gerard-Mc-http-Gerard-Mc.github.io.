@@ -90,6 +90,7 @@ class ApeArray {
 					this.gameState.level++;
 					this.gameState.record++;
 					this.score = 0;
+                    this.nextLevel();
 				}
             }
 			// Game state is always store after a click on the board.
@@ -99,7 +100,7 @@ class ApeArray {
 
 
         this.startButtonEl.addEventListener("click", () => {
-            if ((this.startButtonEl.innerText === "Start" || "Retry?")) {
+            if ((this.startButtonEl.innerText === "Start" || "Retry?" || "Next Level")) {
                 this.start();
             }
         });
@@ -161,6 +162,12 @@ class ApeArray {
         }
         return randomNumbers;
     }
+    
+    nextLevel() {
+		this.removeBoxes();
+		this.startButtonEl.innerText = "Next Level";
+		this.startButtonEl.classList.remove('d-none');
+	}
     
     gameOver() {
 		this.removeBoxes();
