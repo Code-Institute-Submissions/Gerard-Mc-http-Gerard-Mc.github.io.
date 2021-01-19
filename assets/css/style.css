@@ -262,6 +262,36 @@
      transform: translate(0%,-50%);
 }
 /* Media queries for screen height to be able to contain the board */
+ @media screen and (min-height: 850px) {
+    /* boxes and containers below */
+     #box-container {
+         width: 710px ;
+         margin: 0 auto;
+         position: absolute;
+         bottom: 0px;
+         height: auto;
+         left: 50%;
+         transform: translate(-50%,0%);
+    }
+    /* boxes and containers below */
+     .col{
+         width: 100px;
+         height: 100px;
+         margin: 45px;
+    }
+     .box {
+         border-radius: 5px;
+    }
+     .box .box-number {
+         color: black;
+         text-align: center;
+         font-size: 30px;
+         font-family: 'Russo One', sans-serif;
+         position: relative;
+         top: 50%;
+         transform: translate(0%,-50%);
+    }
+}
  @media screen and (max-height: 730px) {
      .col{
          height:15vh;
@@ -416,6 +446,34 @@
          background-color: rgba(0, 0, 0, 0);
          min-height: 300px;
     }
+    /* game area styling starts here */
+     #box-container {
+         width: 510px;
+         margin: 0 auto;
+         position: absolute;
+         bottom: 0px;
+         height: auto;
+         left: 50%;
+         transform: translate(-50%,0%);
+    }
+    /* boxes and containers below */
+     .col{
+         width: 100px;
+         height: 100px;
+         margin: 35px;
+    }
+     .box {
+         border-radius: 5px;
+    }
+     .box .box-number {
+         color: black;
+         text-align: center;
+         font-size: 30px;
+         font-family: 'Russo One', sans-serif;
+         position: relative;
+         top: 50%;
+         transform: translate(0%,-50%);
+    }
 }
  @media screen and (min-width: 1200px) {
     /* Game page styling*/
@@ -441,8 +499,55 @@
          font-size: 30px;
     }
      #reset-button{
-         top: 250px;
+         top: 245px;
     }
     /* Home page styling*/
 }
- 
+ @media screen and (min-height: 850px) {
+    /* boxes and containers below */
+     #box-container {
+         width: 570px ;
+         margin: 0 auto;
+         position: absolute;
+         bottom: 0px;
+         height: auto;
+         left: 50%;
+         transform: translate(-50%,0%);
+    }
+    /* boxes and containers below */
+     .col{
+         width: 100px;
+         height: 100px;
+         margin: 45px;
+    }
+     .box {
+         border-radius: 5px;
+    }
+     .box .box-number {
+         color: black;
+         text-align: center;
+         font-size: 30px;
+         font-family: 'Russo One', sans-serif;
+         position: relative;
+         top: 50%;
+         transform: translate(0%,-50%);
+    }
+}
+ @media screen and (min-height: 950px) {
+    /* boxes and containers below */
+     #box-container {
+         width: 630px ;
+         margin: 0 auto;
+         position: absolute;
+         bottom: 0px;
+         height: auto;
+         left: 50%;
+         transform: translate(-50%,0%);
+    }
+    /* boxes and containers below */
+     .col{
+         width: 100px;
+         height: 100px;
+         margin: 55px;
+    }
+     
