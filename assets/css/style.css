@@ -228,8 +228,6 @@
      font-size: 30px;
 }
 /* game area styling starts here */
- #game-area{
-}
  #box-container {
      width: 100vw;
      position: absolute;
@@ -262,6 +260,45 @@
      position: relative;
      top: 50%;
      transform: translate(0%,-50%);
+}
+/* Media queries for screen height to be able to contain the board */
+ @media screen and (max-height: 730px) {
+     .col{
+         height:15vh;
+    }
+}
+ @media screen and (max-height: 508px) {
+     .col{
+         height:15vh;
+    }
+     #game-hub{
+         height: 150px;
+    }
+     #logo-circle{
+         position: relative;
+         height: 70px;
+         width: 70px;
+         left: 50%;
+         top: 15px;
+         transform: translate(-50%,0%);
+         background-image: url(../images/ape.png);
+         background-size: cover;
+    }
+     #game-hub h1{
+         top: 90px;
+         font-size: 25px;
+    }
+     #xs-levelEl-scoreEl-wrap{
+         top: 130px !important;
+    }
+     #score-holderEl{
+         float: right;
+    }
+     #reset-button{
+         top: 193px !important;
+         height: 38px;
+         font-size: 12px!important;
+    }
 }
 /* Element made for wrapping the high score and current score together on xs screen */
  #xs-levelEl-scoreEl-wrap{
