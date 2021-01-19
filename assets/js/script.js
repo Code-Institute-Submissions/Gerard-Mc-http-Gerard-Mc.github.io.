@@ -13,12 +13,19 @@ class ApeArray {
 	
 	}
     
+    renderBox(index) {
+		return `<div class="box" id="number-box-${index}">
+                    <p class="box-text number" >${this.randomNumbers[index]}</p>
+                </div>
+            </div>`;
+	}
+    
     renderBoard() {
 		const boxContainer = document.getElementById("box-container");
 		this.randomNumbers.forEach((item, index) => {
 			let col = document.createElement("div");
 			col.className = "col";
-			col.innerHTML = index;
+			col.innerHTML = this.renderBox(index);
 			boxContainer.appendChild(col);
 		});
 	}
