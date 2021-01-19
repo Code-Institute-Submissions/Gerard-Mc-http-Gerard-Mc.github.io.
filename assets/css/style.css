@@ -247,29 +247,29 @@
 }
 /* boxes and containers below */
  .col{
-     background-color: white;
      display: inline-block;
      width: 33.33vw;
      color: black;
      height:150px;
-     border-style: solid;
-     border-color: black;
-     border-width:2px;
-     box-sizing: border-box;
      display: inline-flex;
      align-content: center;
      justify-content: center;
 }
  .box {
+     background-color: white;
      border-radius: 5px;
+     width: 33.33vw;
+     display: inline-flex;
+     align-content: center;
+     justify-content: center;
 }
- .box .box-number {
+ .box p {
      color: black;
      text-align: center;
      font-size: 30px;
      font-family: 'Russo One', sans-serif;
      position: relative;
-     top: 50%;
+     top: 82% !important;
      transform: translate(0%,-50%);
 }
 /* Element made for wrapping the high score and current score together on xs screen */
@@ -313,7 +313,7 @@
      height: 170px;
      border-radius: 100px;
      font-size: 20px;
-     top: 300px;
+     top: 400px;
      z-index: 3;
      left: 50%;
      transform: translate(-50%, 0%);
@@ -321,6 +321,22 @@
 /* For script.js to hide start button before the game begins */
  .start-button-hide{
      display: none;
+}
+ .hide-boxes{
+     visibility: hidden !important;
+     border-color: rgba(0, 0, 0, 0)!important;
+}
+ @media screen and (max-width: 768px) {
+     .box {
+         border-style: solid;
+         border-color: black;
+         border-width:2px;
+         box-sizing: border-box;
+    }
+     .hide-boxes{
+         visibility: hidden !important;
+         border-color: rgba(0, 0, 0, 0)!important;
+    }
 }
  @media screen and (min-width: 768px) {
     /* Homepage styling */
@@ -345,6 +361,16 @@
          height: 280px;
          border-radius: 140px;
          font-size: 25px;
+    }
+     .box {
+         border-style: solid;
+         border-color: black;
+         border-width:2px;
+         box-sizing: border-box;
+    }
+     .hide-boxes{
+         visibility: hidden !important;
+         border-color: rgba(0, 0, 0, 0)!important;
     }
 }
  @media screen and (min-width: 992px) {
@@ -399,6 +425,8 @@
          margin: 35px;
     }
      .box {
+         width: 100px;
+         height: 100px;
          border-radius: 5px;
     }
      .box .box-number {
@@ -409,6 +437,10 @@
          position: relative;
          top: 50%;
          transform: translate(0%,-50%);
+    }
+     .hide-boxes{
+         visibility: hidden !important;
+         border-color: rgba(0, 0, 0, 0)!important;
     }
 }
  @media screen and (min-width: 1200px) {
@@ -437,11 +469,18 @@
      #reset-button{
          top: 245px;
     }
+     .hide-boxes{
+         visibility: hidden !important;
+         border-color: rgba(0, 0, 0, 0)!important;
+    }
     /* Home page styling*/
 }
 /* Media queries for screen height to be able to contain the board */
  @media screen and (max-height: 508px) {
      .col{
+         height:15vh;
+    }
+     .box {
          height:15vh;
     }
      #game-hub{
@@ -472,10 +511,21 @@
          height: 38px;
          font-size: 12px!important;
     }
+     .hide-boxes{
+         visibility: hidden !important;
+         border-color: rgba(0, 0, 0, 0)!important;
+    }
 }
  @media screen and (max-height: 730px) {
      .col{
          height:15vh;
+    }
+     .box {
+         height:15vh;
+    }
+     .hide-boxes{
+         visibility: hidden !important;
+         border-color: rgba(0, 0, 0, 0)!important;
     }
 }
  @media screen and (min-height: 850px) {
@@ -491,11 +541,11 @@
     }
     /* boxes and containers below */
      .col{
-         width: 100px;
-         height: 100px;
          margin: 45px;
     }
      .box {
+         width: 100px;
+         height: 100px;
          border-radius: 5px;
     }
      .box .box-number {
@@ -506,6 +556,10 @@
          position: relative;
          top: 50%;
          transform: translate(0%,-50%);
+    }
+     .hide-boxes{
+         visibility: hidden !important;
+         border-color: rgba(0, 0, 0, 0)!important;
     }
 }
  @media screen and (min-height: 950px) {
@@ -521,13 +575,20 @@
     }
     /* boxes and containers below */
      .col{
+         margin: 55px;
+    }
+     .box {
          width: 100px;
          height: 100px;
-         margin: 55px;
+         border-radius: 5px;
+    }
+     .hide-boxes{
+         visibility: hidden !important;
+         border-color: rgba(0, 0, 0, 0)!important;
     }
 }
  @media screen and (max-height: 440px) {
-     .col{
+     .box {
          height:15vh;
     }
      #game-hub h1{
@@ -550,12 +611,23 @@
          height: 28px;
          font-size: 10px!important;
     }
+     .hide-boxes{
+         visibility: hidden !important;
+         border-color: rgba(0, 0, 0, 0)!important;
+    }
 }
  @media (max-height: 768px) and (min-width: 992px) {
      .col{
-         width: 100px;
-         height: 50px;
          margin: 35px;
          margin-top: 25px;
     }
+     .box {
+         width: 100px;
+         height: 50px;
+    }
+     .hide-boxes{
+         visibility: hidden !important;
+         border-color: rgba(0, 0, 0, 0)!important;
+    }
 }
+ 
