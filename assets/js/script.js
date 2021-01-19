@@ -49,7 +49,6 @@ class ApeArray {
 				level: 1
 			};
 		}
-		this.renderState();
 	}
     
     /* Updates local storage values */
@@ -85,10 +84,15 @@ class ApeArray {
                 event.target.classList.add('hide-boxes');
                 this.score++;
                 // Update Scores
+				if(this.score == this.boxes && this.gameState.level < MAX_LEVEL + 1) {
+					this.gameState.level++;
+					this.gameState.record++;
+					this.score = 0;
+				}
             }
-            
-            this.updateGameState();
-        });
+			// Game state is always store after a click on the board.
+			this.updateGameState();
+		});
 
 
         this.startButtonEl.addEventListener("click", () => {
