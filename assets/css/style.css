@@ -302,7 +302,8 @@
      height: 170px;
      border-radius: 100px;
      font-size: 20px;
-     top: 350px;
+     top: 0px;
+     z-index: 3;
      left: 50%;
      transform: translate(-50%, 0%);
 }

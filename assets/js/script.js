@@ -6,16 +6,39 @@ class ApeArray {
 		this.renderBoard();
 		this.startButtonEl = document.getElementById("start-button");
 		this.resetButtonEl = document.getElementById("reset-button");
-		this.startGameCountDownTime = 3;
+		this.startGameCountDownTime = 4;
+        this.addListener();
 	}
     start() {
-		this.gameStarted();
+        this.countDown(this.startGameCountDownTime, () => {
+			
+		});
 	
+	}
+    
+    addListener() {
+     	this.startButtonEl.addEventListener("click", () => {
+			if((this.startButtonEl.innerText === "Start")) {
+				this.start();
+			}
+		});   
+    }
+    
+    countDown(timeInSeconds, callback) {
+		let seconds = timeInSeconds;
+		const clock = setInterval(() => {
+			seconds--;
+            this.startButtonEl.innerText = seconds;
+			if(seconds === 0) {
+				clearInterval(clock);
+				callback();
+			}
+		}, 1000);
 	}
     
     renderBox(index) {
 		return `<div class="box" id="number-box-${index}">
-                    <p class="box-number">${this.randomNumbers[index]}</p>
+                    <p class="box-number" >${this.randomNumbers[index]}</p>
                 </div>
             </div>`;
 	}
