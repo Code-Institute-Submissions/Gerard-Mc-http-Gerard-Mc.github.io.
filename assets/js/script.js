@@ -2,6 +2,7 @@ class ApeArray {
     constructor() {
         this.score = 0;
         this.boxes = 9;
+        this.clickCounter = 0;
         this.randomNumbers = this.creatingRandomNumbers(this.boxes);
         this.startButtonEl = document.getElementById("start-button");
         this.resetButtonEl = document.getElementById("reset-button");
@@ -11,9 +12,10 @@ class ApeArray {
     }
 
     start() {
+        this.clickCounter = 0;
         this.randomNumbers = this.creatingRandomNumbers(this.boxes);
         this.startButtonEl.classList.remove('start-button-hide');
-       this.countDown(this.startGameCountDownTime, () => {
+        this.countDown(this.startGameCountDownTime, () => {
 			this.startButtonEl.classList.add('start-button-hide');
 			this.renderBoard();
 			this.countDown(this.gameStageCountDownTime, () => {
@@ -36,6 +38,11 @@ class ApeArray {
             el.innerHTML = '';
         });
     }
+    
+    /* checks if box value is equal to the amount of attemps of clicks. The value should be equal to the amount of clicks as the game sequence only increments by one each attemp*/
+    checkClick(boxElement) {
+		return parseInt(boxElement.dataset.value) === this.clickCounter;
+	}
 
     /* Checks when start button is pressed to begin game */
     addListener() {
@@ -63,7 +70,7 @@ class ApeArray {
     /* Renders boxes */
     renderBox(index) {
         return `<div class="box" id="number-box-${index}">
-                    <p class="box-number" >${this.randomNumbers[index]}</p>
+                    <p class="box-number" data-value="${this.randomNumbers[index]}">${this.randomNumbers[index]}</p>
                 </div>
             </div>`;
     }
