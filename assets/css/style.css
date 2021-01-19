@@ -326,6 +326,11 @@
      visibility: hidden !important;
      border-color: rgba(0, 0, 0, 0)!important;
 }
+
+#start-button:focus {
+	outline: 0;
+	outline: none;
+}
  @media screen and (max-width: 768px) {
      .box {
          border-style: solid;

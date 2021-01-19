@@ -4,7 +4,7 @@ const MAX_LEVEL = 5;
 class ApeArray {
     constructor() {
         this.score = 0;
-        this.boxes = 4;
+        this.boxes = 9;
         this.started = false;
         this.clickCounter = 0;
         this.randomNumbers = this.creatingRandomNumbers(this.boxes);
