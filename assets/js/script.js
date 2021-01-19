@@ -3,18 +3,31 @@ class ApeArray {
         this.score = 0;
         this.boxes = 9;
         this.randomNumbers = this.creatingRandomNumbers(this.boxes);
-        this.renderBoard();
         this.startButtonEl = document.getElementById("start-button");
         this.resetButtonEl = document.getElementById("reset-button");
         this.startGameCountDownTime = 4;
         this.addListener();
     }
-    start() {
-        this.countDown(this.startGameCountDownTime, () => {
-            this.startButtonEl.classList.add('start-button-hide');
-        });
 
+
+    start() {
+        this.randomNumbers = this.creatingRandomNumbers(this.boxes);
+        this.startButtonEl.classList.remove('start-button-hide');
+        this.countDown(this.startGameCountDownTime, () => {
+                this.startButtonEl.classList.add('start-button-hide');
+                this.renderBoard();
+                this.gameStarted();
+            }
+
+        );
     }
+
+    gameStarted() {
+        Array.from(document.getElementsByClassName('box-number')).forEach((el, index) => {
+            el.innerHTML = '';
+        });
+    }
+
 
     addListener() {
         this.startButtonEl.addEventListener("click", () => {
@@ -33,7 +46,8 @@ class ApeArray {
                 clearInterval(clock);
                 callback();
             }
-        }, 1000);
+
+        }, 300);
     }
 
     renderBox(index) {
