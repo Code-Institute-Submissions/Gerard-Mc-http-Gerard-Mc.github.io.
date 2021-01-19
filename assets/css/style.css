@@ -261,75 +261,6 @@
      top: 50%;
      transform: translate(0%,-50%);
 }
-/* Media queries for screen height to be able to contain the board */
- @media screen and (min-height: 850px) {
-    /* boxes and containers below */
-     #box-container {
-         width: 710px ;
-         margin: 0 auto;
-         position: absolute;
-         bottom: 0px;
-         height: auto;
-         left: 50%;
-         transform: translate(-50%,0%);
-    }
-    /* boxes and containers below */
-     .col{
-         width: 100px;
-         height: 100px;
-         margin: 45px;
-    }
-     .box {
-         border-radius: 5px;
-    }
-     .box .box-number {
-         color: black;
-         text-align: center;
-         font-size: 30px;
-         font-family: 'Russo One', sans-serif;
-         position: relative;
-         top: 50%;
-         transform: translate(0%,-50%);
-    }
-}
- @media screen and (max-height: 730px) {
-     .col{
-         height:15vh;
-    }
-}
- @media screen and (max-height: 508px) {
-     .col{
-         height:15vh;
-    }
-     #game-hub{
-         height: 150px;
-    }
-     #logo-circle{
-         position: relative;
-         height: 70px;
-         width: 70px;
-         left: 50%;
-         top: 15px;
-         transform: translate(-50%,0%);
-         background-image: url(../images/ape.png);
-         background-size: cover;
-    }
-     #game-hub h1{
-         top: 90px;
-         font-size: 25px;
-    }
-     #xs-levelEl-scoreEl-wrap{
-         top: 130px !important;
-    }
-     #score-holderEl{
-         float: right;
-    }
-     #reset-button{
-         top: 193px !important;
-         height: 38px;
-         font-size: 12px!important;
-    }
-}
 /* Element made for wrapping the high score and current score together on xs screen */
  #xs-levelEl-scoreEl-wrap{
      position: absolute;
@@ -503,6 +434,45 @@
     }
     /* Home page styling*/
 }
+/* Media queries for screen height to be able to contain the board */
+ @media screen and (max-height: 508px) {
+     .col{
+         height:15vh;
+    }
+     #game-hub{
+         height: 150px;
+    }
+     #logo-circle{
+         position: relative;
+         height: 70px;
+         width: 70px;
+         left: 50%;
+         top: 15px;
+         transform: translate(-50%,0%);
+         background-image: url(../images/ape.png);
+         background-size: cover;
+    }
+     #game-hub h1{
+         top: 90px;
+         font-size: 25px;
+    }
+     #xs-levelEl-scoreEl-wrap{
+         top: 130px !important;
+    }
+     #score-holderEl{
+         float: right;
+    }
+     #reset-button{
+         top: 193px !important;
+         height: 38px;
+         font-size: 12px!important;
+    }
+}
+ @media screen and (max-height: 730px) {
+     .col{
+         height:15vh;
+    }
+}
  @media screen and (min-height: 850px) {
     /* boxes and containers below */
      #box-container {
@@ -550,4 +520,30 @@
          height: 100px;
          margin: 55px;
     }
-     
+}
+ @media screen and (max-height: 440px) {
+     .col{
+         height:15vh;
+    }
+     #game-hub h1{
+         display: none;
+    }
+     #game-hub h1{
+         top: 20px;
+         font-size: 25px;
+    }
+     #xs-levelEl-scoreEl-wrap{
+         top: 100px !important;
+         font-size: 10px;
+    }
+     #score-holderEl{
+         float: right;
+    }
+     #reset-button{
+         padding: 5px;
+         top: 140px !important;
+         height: 28px;
+         font-size: 10px!important;
+    }
+}
+ 
