@@ -92,6 +92,12 @@ class ApeArray {
 					this.score = 0;
                     this.nextLevel();
 				}
+                /* Max score achieved */
+				if(this.gameState.level === MAX_LEVEL + 1) {
+					this.gameState.level--;
+					this.gameState.record = MAX_LEVEL;
+					this.gameComplete();
+				}
             }
 			// Game state is always store after a click on the board.
 			this.updateGameState();
