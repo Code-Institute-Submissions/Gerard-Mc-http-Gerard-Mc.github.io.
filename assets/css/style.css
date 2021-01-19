@@ -326,10 +326,9 @@
      visibility: hidden !important;
      border-color: rgba(0, 0, 0, 0)!important;
 }
-
-#start-button:focus {
-	outline: 0;
-	outline: none;
+ #start-button:focus {
+     outline: 0;
+     outline: none;
 }
  @media screen and (max-width: 768px) {
      .box {
@@ -521,7 +520,7 @@
          border-color: rgba(0, 0, 0, 0)!important;
     }
 }
- @media screen and (max-height: 730px) {
+ @media screen and (max-height: 650px) {
      .col{
          height:15vh;
     }
@@ -531,6 +530,18 @@
      .hide-boxes{
          visibility: hidden !important;
          border-color: rgba(0, 0, 0, 0)!important;
+    }
+     #start-button {
+         position: absolute;
+         width: 100px;
+         height: 100px;
+         border-radius: 100px;
+         top: 290px;
+         z-index: 3;
+         left: 50%;
+         transform: translate(-50%, 0%);
+         font-size: 12px !important;
+         line-height: 1;
     }
 }
  @media screen and (min-height: 850px) {
@@ -623,12 +634,12 @@
 }
  @media (max-height: 768px) and (min-width: 992px) {
      .col{
-         margin: 35px;
-         margin-top: 25px;
+         margin: 0px 35px ;
+         
     }
      .box {
-         width: 100px;
-         height: 50px;
+         width: 120px;
+         height: 60px;
     }
      .hide-boxes{
          visibility: hidden !important;
