@@ -1,7 +1,8 @@
 class ApeArray {
     constructor() {
         this.score = 0;
-        this.boxes = 9;
+        this.boxes = 4;
+        this.started = false;
         this.clickCounter = 0;
         this.randomNumbers = this.creatingRandomNumbers(this.boxes);
         this.startButtonEl = document.getElementById("start-button");
@@ -13,39 +14,61 @@ class ApeArray {
 
     start() {
         this.clickCounter = 0;
+        this.score = 0;
+        this.started = false;
         this.randomNumbers = this.creatingRandomNumbers(this.boxes);
         this.startButtonEl.classList.remove('start-button-hide');
         this.countDown(this.startGameCountDownTime, () => {
-			this.startButtonEl.classList.add('start-button-hide');
-			this.renderBoard();
-			this.countDown(this.gameStageCountDownTime, () => {
-				this.gameStarted();
-			});
-		}, (seconds) => {
-			if(seconds > 3) {
-				this.startButtonEl.innerText = "You have 3 secs to memorize the boxes";
-				this.startButtonEl.style.fontSize = "18px";
-				this.startButtonEl.style.padding = "18px";
-			} else {
-				this.startButtonEl.style.fontSize = "30px";
-				this.startButtonEl.innerText = seconds;
-			}
-		});
-	}
-/* removes numbers once the game has started */
+            this.startButtonEl.classList.add('start-button-hide');
+            this.renderBoard();
+            this.countDown(this.gameStageCountDownTime, () => {
+                this.gameStarted();
+            });
+        }, (seconds) => {
+            if (seconds > 3) {
+                this.startButtonEl.innerText = "You have 3 secs to memorize the boxes";
+                this.startButtonEl.style.fontSize = "18px";
+                this.startButtonEl.style.padding = "18px";
+            } else {
+                this.startButtonEl.style.fontSize = "30px";
+                this.startButtonEl.innerText = seconds;
+            }
+        });
+    }
+    /* removes numbers once the game has started */
     gameStarted() {
         Array.from(document.getElementsByClassName('box-number')).forEach((el, index) => {
             el.innerHTML = '';
         });
+        this.started = true;
     }
-    
+
     /* checks if box value is equal to the amount of attemps of clicks. The value should be equal to the amount of clicks as the game sequence only increments by one each attemp*/
     checkClick(boxElement) {
-		return parseInt(boxElement.dataset.value) === this.clickCounter;
-	}
+        return parseInt(boxElement.dataset.value) === this.clickCounter;
+    }
 
     /* Checks when start button is pressed to begin game */
     addListener() {
+        const boxContainer = document.getElementById("box-container");
+        boxContainer.addEventListener("click", (event) => {
+            if (!this.started) {
+                return;
+            }
+            this.clickCounter++;
+            if (!this.checkClick(event.target.firstElementChild)) {
+                // Game Over!
+                this.gameOver();
+            } else {
+                // Hide the clicked number
+                event.target.classList.add('hide-boxes');
+                this.score++;
+                // Update Scores
+
+            }
+        });
+
+
         this.startButtonEl.addEventListener("click", () => {
             if ((this.startButtonEl.innerText === "Start")) {
                 this.start();
@@ -53,20 +76,20 @@ class ApeArray {
         });
     }
 
-    	countDown(timeInSeconds, callback, iterCallback = null) {
-		let seconds = timeInSeconds;
-		const clock = setInterval(() => {
-			seconds--;
-			if(seconds === 0) {
-				clearInterval(clock);
-				callback();
-			}
-			if(iterCallback) {
-				iterCallback(seconds);
-			}
-		}, 1000);
-	}
-    
+    countDown(timeInSeconds, callback, iterCallback = null) {
+        let seconds = timeInSeconds;
+        const clock = setInterval(() => {
+            seconds--;
+            if (seconds === 0) {
+                clearInterval(clock);
+                callback();
+            }
+            if (iterCallback) {
+                iterCallback(seconds);
+            }
+        }, 100);
+    }
+
     /* Renders boxes */
     renderBox(index) {
         return `<div class="box" id="number-box-${index}">
@@ -74,7 +97,7 @@ class ApeArray {
                 </div>
             </div>`;
     }
-/* Renders boxes into divs into a div container */
+    /* Renders boxes into divs into a div container */
     renderBoard() {
         const boxContainer = document.getElementById("box-container");
         this.randomNumbers.forEach((item, index) => {
