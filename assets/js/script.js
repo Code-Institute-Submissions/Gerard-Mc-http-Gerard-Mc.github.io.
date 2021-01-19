@@ -100,7 +100,7 @@ class ApeArray {
 
 
         this.startButtonEl.addEventListener("click", () => {
-            if ((this.startButtonEl.innerText === "Start" || "Retry?" || "Next Level")) {
+            if ((this.startButtonEl.innerText === "Start" || "Retry?" || "Next Level" || "Max Score Achieved!!")) {
                 this.start();
             }
         });
@@ -166,7 +166,14 @@ class ApeArray {
     nextLevel() {
 		this.removeBoxes();
 		this.startButtonEl.innerText = "Next Level";
-		this.startButtonEl.classList.remove('d-none');
+		this.startButtonEl.classList.remove('start-button-hide');
+	}
+    
+    gameComplete() {
+		this.removeBoxes();
+		this.startButtonEl.innerText = "Max Score Achieved!!";
+		this.startButtonEl.classList.remove('start-button-hide');
+		this.resetScores();
 	}
     
     gameOver() {
