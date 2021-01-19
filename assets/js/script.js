@@ -4,7 +4,7 @@ const MAX_LEVEL = 5;
 class ApeArray {
     constructor() {
         this.score = 0;
-        this.boxes = 4;
+        this.boxes = 9;
         this.started = false;
         this.clickCounter = 0;
         this.randomNumbers = this.creatingRandomNumbers(this.boxes);
@@ -106,7 +106,7 @@ class ApeArray {
 
 
         this.startButtonEl.addEventListener("click", () => {
-            if ((this.startButtonEl.innerText === "Start" || "Retry?" || "Next Level" || "Max Score Achieved!!")) {
+            if ((this.startButtonEl.innerText === "Start" || "Retry?" || "Next Level" || "Max Score Achieved!!") && (event.detail == 1)) {
                 this.start();
             }
         });
@@ -127,7 +127,7 @@ class ApeArray {
             if (iterCallback) {
                 iterCallback(seconds);
             }
-        }, 100);
+        }, 1000);
     }
     
     /* Renders scores to html elements */
