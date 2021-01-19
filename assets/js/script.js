@@ -99,7 +99,7 @@ class ApeArray {
 
 
         this.startButtonEl.addEventListener("click", () => {
-            if ((this.startButtonEl.innerText === "Start")) {
+            if ((this.startButtonEl.innerText === "Start" || "Retry?")) {
                 this.start();
             }
         });
@@ -161,7 +161,19 @@ class ApeArray {
         }
         return randomNumbers;
     }
-
+    
+    gameOver() {
+		this.removeBoxes();
+		this.startButtonEl.innerText = "Retry?";
+		this.startButtonEl.classList.remove('start-button-hide');
+	}
+    
+    removeBoxes() {
+		Array.from(document.getElementsByClassName('col')).forEach((el, index) => {
+			el.remove();
+		});
+	}
+    
 }
 
 const apeArray = new ApeArray();
