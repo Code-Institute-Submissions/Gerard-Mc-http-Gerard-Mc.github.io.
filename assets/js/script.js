@@ -182,6 +182,11 @@ class ApeArray {
 		this.startButtonEl.classList.remove('start-button-hide');
 	}
     
+    resetScores() {
+		this.gameState.level = 1;
+		this.gameState.record = 0;
+	}
+    
     removeBoxes() {
 		Array.from(document.getElementsByClassName('col')).forEach((el, index) => {
 			el.remove();
