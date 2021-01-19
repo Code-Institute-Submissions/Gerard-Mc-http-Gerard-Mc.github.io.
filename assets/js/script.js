@@ -4,7 +4,7 @@ const MAX_LEVEL = 5;
 class ApeArray {
     constructor() {
         this.score = 0;
-        this.boxes = 9;
+        this.boxes = 4;
         this.started = false;
         this.clickCounter = 0;
         this.randomNumbers = this.creatingRandomNumbers(this.boxes);
@@ -31,7 +31,7 @@ class ApeArray {
             });
         }, (seconds) => {
             if (seconds > 3) {
-                this.startButtonEl.innerText = "You have 3 secs to memorize the boxes";
+                this.startButtonEl.innerText = "You have " + (MAX_LEVEL - this.gameState.record) + " secs to memorize the boxes";
                 this.startButtonEl.style.fontSize = "18px";
                 this.startButtonEl.style.padding = "18px";
             } else {
