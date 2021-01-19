@@ -229,25 +229,39 @@
 }
 /* game area styling starts here */
  #game-area{
-     display: flex;
-     justify-content: center;
-     align-items: center;
 }
  #box-container {
-     width: 90vw;
-     margin-top: 100px;
+     width: 100vw;
+     position: absolute;
+     bottom: 0;
      height: auto;
-     display: flex;
-     justify-content: center;
-     align-items: center;
 }
+/* boxes and containers below */
  .col{
      background-color: white;
      display: inline-block;
-     width: 30vw;
+     width: 33.33vw;
      color: black;
      height:150px;
-     margin: 20px;
+     border-style: solid;
+     border-color: black;
+     border-width:2px;
+     box-sizing: border-box;
+     display: inline-flex;
+     align-content: center;
+     justify-content: center;
+}
+ .box {
+     border-radius: 5px;
+}
+ .box .box-number {
+     color: black;
+     text-align: center;
+     font-size: 30px;
+     font-family: 'Russo One', sans-serif;
+     position: relative;
+     top: 50%;
+     transform: translate(0%,-50%);
 }
 /* Element made for wrapping the high score and current score together on xs screen */
  #xs-levelEl-scoreEl-wrap{

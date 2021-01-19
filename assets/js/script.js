@@ -15,7 +15,7 @@ class ApeArray {
     
     renderBox(index) {
 		return `<div class="box" id="number-box-${index}">
-                    <p class="box-text number" >${this.randomNumbers[index]}</p>
+                    <p class="box-number">${this.randomNumbers[index]}</p>
                 </div>
             </div>`;
 	}
