@@ -1,3 +1,6 @@
+const GAMEKEY = 'ape-array-storage-key';
+const MAX_LEVEL = 5;
+
 class ApeArray {
     constructor() {
         this.score = 0;
@@ -9,6 +12,7 @@ class ApeArray {
         this.resetButtonEl = document.getElementById("reset-button");
         this.startGameCountDownTime = 6;
         this.gameStageCountDownTime = 2;
+        this.loadGameState();
         this.addListener();
     }
 
@@ -16,6 +20,7 @@ class ApeArray {
         this.clickCounter = 0;
         this.score = 0;
         this.started = false;
+        this.gameStageCountDownTime = MAX_LEVEL - this.gameState.record; // will be level
         this.randomNumbers = this.creatingRandomNumbers(this.boxes);
         this.startButtonEl.classList.remove('start-button-hide');
         this.countDown(this.startGameCountDownTime, () => {
@@ -35,6 +40,22 @@ class ApeArray {
             }
         });
     }
+    /* Creates default scores or retrieves scores from local storage */
+    loadGameState() {
+		this.gameState = JSON.parse(localStorage.getItem(GAMEKEY));
+		if(!this.gameState) {
+			this.gameState = {
+				record: 0,
+				level: 1
+			};
+		}
+		this.renderState();
+	}
+    
+    /* Updates local storage values */
+    updateGameState() {
+		localStorage.setItem(GAMEKEY, JSON.stringify(this.gameState));
+	}
     /* removes numbers once the game has started */
     gameStarted() {
         Array.from(document.getElementsByClassName('box-number')).forEach((el, index) => {
@@ -64,8 +85,9 @@ class ApeArray {
                 event.target.classList.add('hide-boxes');
                 this.score++;
                 // Update Scores
-
             }
+            
+            this.updateGameState();
         });
 
 
