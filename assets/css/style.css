@@ -145,7 +145,18 @@
      min-height: 200px;
      margin-bottom: 0px;
 }
-/* XS game page hub styling starts here */
+ footer {
+     height: 40px;
+     text-align: center;
+     background-color: black;
+     position: relative;
+     bottom: 0;
+}
+ footer p{
+     position: relative;
+     top: 10px;
+}
+/*game page hub styling starts here */
  #game-hub{
      height: 200px;
 }
@@ -307,16 +318,9 @@
      left: 50%;
      transform: translate(-50%, 0%);
 }
- footer {
-     height: 40px;
-     text-align: center;
-     background-color: black;
-     position: relative;
-     bottom: 0;
-}
- footer p{
-     position: relative;
-     top: 10px;
+/* For script.js to hide start button before the game begins */
+ .start-button-hide{
+     display: none;
 }
  @media screen and (min-width: 768px) {
     /* Homepage styling */
@@ -549,7 +553,7 @@
 }
  @media (max-height: 768px) and (min-width: 992px) {
      .col{
-        width: 100px;
+         width: 100px;
          height: 50px;
          margin: 35px;
          margin-top: 25px;
